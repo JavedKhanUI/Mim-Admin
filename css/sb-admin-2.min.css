@@ -11222,6 +11222,10 @@ body.sidebar-toggled footer.sticky-footer {
   width: 100%;
 }
 
+.bootstrap-select>.dropdown-toggle {
+    border: 1px solid #d1d3e2;
+}
+
 
 /*// Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) { 
