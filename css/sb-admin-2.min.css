@@ -11225,6 +11225,13 @@ body.sidebar-toggled footer.sticky-footer {
 .bootstrap-select>.dropdown-toggle {
     border: 1px solid #d1d3e2;
 }
+.nav-tabs .nav-link {
+    color: #fff;
+}
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+    color: #1e2f44;
+    font-weight: 700;
+}
 
 
 /*// Extra small devices (portrait phones, less than 576px)*/
@@ -11253,9 +11260,6 @@ body.sidebar-toggled footer.sticky-footer {
 
 /*// Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {
-.fa-spin {
-  -webkit-animation: fa-spin 1s infinite linear;
-  animation: fa-spin 1s infinite linear;
-}
+
 
 }

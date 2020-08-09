@@ -285,61 +285,50 @@
       <!-- Begin Page Content -->
       <div class="container-fluid"> 
           
-        <div class="row"> 
+       <div class="row"> 
           
-          <!-- Today SMS Sent Count -->
-          <div class="col-xl-6 col-md-6 mb-4">
+          <!-- Delevired Card Example -->
+          <div class="col-xl-4 col-md-6 mb-4">
             <div class="card border-left-success shadow h-100 py-2">
               <div class="card-body p-2">
                 <div class="d-flex justify-content-between mr-auto my-2">
-                  <div class="font-weight-bold text-success text-uppercase mb-1">* Today SMS Sent Count :</div>
-                  <div class="h5 mb-0 font-weight-bold"><a href="#" class="text-success">22,233</a></div>
+                  <div class="font-weight-bold text-success text-uppercase mb-1">Delevired</div>
+                  <div class="h5 mb-0 font-weight-bold text-success">27147</div>
                 </div>
               </div>
             </div>
           </div>
           
-          <!-- Old Report -->
-          <div class="col-xl-6 col-md-6 mb-4">
+          <!-- Failed Card Example -->
+          <div class="col-xl-4 col-md-6 mb-4">
             <div class="card border-left-danger shadow h-100 py-2">
               <div class="card-body p-2">
                 <div class="d-flex justify-content-between mr-auto my-2">
-                  <div class="font-weight-bold text-danger text-uppercase mb-1">Old Report</div>
-                  <div class="h5 mb-0 font-weight-bold"><a href="#" class="text-danger">Click Here</a></div>
+                  <div class="font-weight-bold text-danger text-uppercase mb-1">Failed</div>
+                  <div class="h5 mb-0 font-weight-bold text-danger">2310</div>
                 </div>
               </div>
             </div>
           </div>
           
-          <!-- Report --> 
-          <!--
-            <div class="col-xl-4 col-md-6 mb-4">
-              <div class="card border-left-warning shadow h-100 py-2">
-                <div class="card-body p-2">
-                    <div class="d-flex justify-content-between mr-auto my-2">
-                      <div class="font-weight-bold text-warning text-uppercase mb-1">Awaited</div>
-                      <div class="h5 mb-0 font-weight-bold text-warning">2342</div>
-                    </div>
+          <!-- Unknown Card Example -->
+          <div class="col-xl-4 col-md-6 mb-4">
+            <div class="card border-left-warning shadow h-100 py-2">
+              <div class="card-body p-2">
+                <div class="d-flex justify-content-between mr-auto my-2">
+                  <div class="font-weight-bold text-warning text-uppercase mb-1">Unknown</div>
+                  <div class="h5 mb-0 font-weight-bold text-warning">2342</div>
                 </div>
               </div>
             </div>
---> 
-          
+          </div>
         </div>
+        
         <div class="card card-body mb-4">
           <div class="row">
             <div class="col-md-12">
               <form>
                 <div class="form-row">
-                  <div class="form-group col-md-3">
-                    <label for="#">Campaign Name</label>
-                    <select class="drop-select form-control" data-live-search="true">
-                      <option selected="">Select</option>
-                      <option data-tokens="10" value="1">10</option>
-                      <option data-tokens="20" value="2">20</option>
-                      <option data-tokens="30" value="3">50</option>
-                    </select>
-                  </div>
                   <div class="form-group col-md-3">
                     <label for="#">Date Select</label>
                     <a class="btn btn-primary text-white btn-block" id="reportrange" role="button" aria-pressed="true"> <i class="fas fa-calendar mr-2 text-white"></i> <span class="text-white"></span> <i class="ml-1 fas chevron-down" data-feather="chevron-down"></i> </a> </div>
@@ -358,8 +347,8 @@
         <!-- Collapsable Card Example -->
         <div class="card shadow mb-4"> 
           <!-- Card Header - Accordion --> 
-          <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
-          <h6 class="m-0 font-weight-bold text-primary">Todays sent count info</h6>
+          <a href="#collapseCardExample" class="d-block card-header py-3 bg-gradient-primary" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+          <h6 class="m-0 font-weight-bold text-white">Todays sent count info</h6>
           </a> 
           <!-- Card Content - Collapse -->
           <div class="collapse" id="collapseCardExample">
@@ -401,7 +390,7 @@
           <!-- Area Chart -->
           <div class="col-xl-12 col-lg-12">
             <div class="card mb-4">
-              <div class="card-header border-bottom"> 
+              <div class="card-header border-bottom bg-gradient-primary"> 
                 <!-- Dashboard card navigation-->
                 <ul class="nav nav-tabs card-header-tabs" id="dashboardNav" role="tablist">
                   <li class="nav-item mr-1"><a class="nav-link active" id="overview-pill" href="#overview" data-toggle="tab" role="tab" aria-controls="overview" aria-selected="true">Todays Count</a></li>
