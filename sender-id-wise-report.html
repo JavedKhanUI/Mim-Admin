@@ -145,7 +145,7 @@
     <div id="content"> 
       
       <!-- Topbar -->
-      <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow"> 
+      <nav class="navbar navbar-expand navbar-light bg-white topbar static-top shadow"> 
         
         <!-- Sidebar Toggle (Topbar) -->
         <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3"> <i class="fa fa-bars"></i> </button>
@@ -255,19 +255,37 @@
       </nav>
       <!-- End of Topbar --> 
       
+      <header class="page-header page-header-compact page-header-light border-bottom bg-white mb-4">
+            <div class="container-fluid">
+                <div class="page-header-content">
+                    <div class="row align-items-center justify-content-between pt-3 text-center">
+                        <div class="col-12 col-xl-auto mb-3">
+                            <h1 class="page-header-title h5">
+                              <a href="#" class="btn btn-success btn-icon-split">
+                                <span class="icon text-white">
+                                  <i class="fas fa-wallet"></i>
+                                </span>
+                                <span class="text font-weight-bold">Balance : 13564.650</span>
+                              </a>
+                            </h1>
+                        </div>
+                        <div class="col-12 col-xl-auto mb-3">
+                            <a href="#" class="btn btn-light btn-icon-split">
+                                <span class="icon text-gray-600">
+                                  <i class="fas fa-calendar-alt"></i>
+                                </span>
+                                <span class="text font-weight-bold">Date : <span class="user"></span></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
       <!-- Begin Page Content -->
       <div class="container-fluid"> 
         
         <!-- Page Heading -->
-        <div class="row">
-          <div class="col-md-9 mb-3">
-            <div class="d-flex justify-content-between mr-auto ml-md-3 my-2 my-md-0 mw-100">
-              <p class="mr-lg-5 mb-0 d-none d-sm-block"><span class="font-weight-bold">My Inbox Media Pvt. Ltd.</span></p>
-              <p class="mr-lg-3 mb-0"><span class="font-weight-bold">Balance   :</span> 13564.650</p>
-              <p class="mr-lg-3 mb-0"><span class="font-weight-bold">Date  :</span> July 24, 2020, 14:58 PM</p>
-            </div>
-          </div>
-        </div>
         <div class="card card-body mb-4">
           <div class="row">
             <div class="col-md-12">
@@ -530,6 +548,7 @@
 <script src="js/demo/datatables-demo.js"></script> 
 <script src="js/demo/date-range-picker-demo.js"></script> 
 <script>
+ //Datatable Search Filter
     $(document).ready(function() {
     // Setup - add a text input to each footer cell
     $('#dataTable3 thead tr').clone(true).appendTo( '#dataTable3 thead' );
@@ -552,16 +571,22 @@
         fixedHeader: true
     } );
 } );  
-  </script> 
+</script>
+    
 <script>
+    //Select Convert ul li
     $('.drop-select').selectpicker();
 </script> 
+    
 <script>
+//Tool Tip
     $(function () {
       $('[data-toggle="tooltip"]').tooltip()
     })
 </script>
+    
 <script>
+//File Name Show
     $('#customFile').on('change',function(){
         //get the file name
         var fileName = $(this).val();
@@ -569,5 +594,41 @@
         $(this).next('.custom-file-label').html(fileName);
     })
 </script>
+
+<script>
+//   Current Date Time
+$(function($) {
+  setInterval(function(){
+    // param sets timezone 
+    $('.user').timeUser();
+  }, 1000);
+});
+
+$.fn.extend ( {
+    timeTarget: function(offSet) {
+        var hiDate, 
+        		hiTime, 
+        		hiHours;
+        
+        tgtTime  = new Date();
+        tgtHours = tgtTime.getUTCHours() - offSet;
+        tgtTime.setHours(tgtHours);
+        tgtDate  = tgtTime.toDateString();
+        tgtTime = tgtTime.toTimeString();
+        this.html(tgtDate + ' ' + tgtTime.substring(0, 8));  
+      },
+  
+    timeUser: function() {
+        var userTime, 
+        userDate;
+        
+        userTime = new Date();
+        userDate = userTime.toDateString(); 
+        userTime = userTime.toTimeString();
+               
+       this.html(userDate + ' ' + userTime.substring(0, 8)); 
+    }        
+});  
+</script>  
 </body>
 </html>
