@@ -294,10 +294,96 @@
             <!-- Basic Card Example -->
             <div class="card shadow mb-4">
               <div class="card-header py-3 bg-gradient-primary">
-                <h6 class="m-0 font-weight-bold text-white">Add Sender Id</h6>
+                <h6 class="m-0 font-weight-bold text-white" class="font-weight-bold">Add Sender Id</h6>
               </div>
               <div class="card-body">
-
+                    <form class="needs-validation" novalidate>
+                          <div class="form-row">
+                            <div class="col-md-6 mb-3">
+                              <label for="validationCustom01" class="font-weight-bold">Sender Id<span class="text-danger">*</span></label>
+                              <input type="text" class="form-control" id="validationCustom01" required>
+                              <div class="valid-feedback">
+                                Looks good!
+                              </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                              <label for="validationCustom02" class="font-weight-bold">Client Name<span class="text-danger">*</span></label>
+                              <input type="text" class="form-control" id="validationCustom02" required>
+                              <div class="valid-feedback">
+                                Looks good!
+                              </div>
+                            </div>
+                          </div>
+                         <div class="form-row">
+                            <div class="col-md-12 mb-3">
+                              <label for="validationCustom03" class="font-weight-bold">Company Name<span class="text-danger">*</span></label>
+                              <input type="text" class="form-control" id="validationCustom03" required>
+                              <div class="valid-feedback">
+                                Looks good!
+                              </div>
+                            </div>
+                          </div>
+                        
+                          <div class="form-row">
+                            <div class="col-md-4 mb-3">
+                              <label for="validationCustom04" class="font-weight-bold">Country<span class="text-danger">*</span></label>
+                              <input type="text" class="form-control" id="validationCustom04" required>
+                              <div class="invalid-feedback">
+                                Please provide a valid city.
+                              </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                              <label for="validationCustom05" class="font-weight-bold">Mobile No.<span class="text-danger">*</span></label>
+                              <input type="text" class="form-control" id="validationCustom05" required>
+                              <div class="invalid-feedback">
+                                Please select a valid state.
+                              </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                              <label for="validationCustom06" class="font-weight-bold">Email Id<span class="text-danger">*</span></label>
+                              <input type="email" class="form-control" id="validationCustom06" required>
+                              <div class="invalid-feedback">
+                                Please provide a valid zip.
+                              </div>
+                            </div>
+                          </div>
+                        <div class="form-row">
+                            <div class="col-md-4 mb-3">
+                              <label for="customFile7" class="font-weight-bold">NOC Documents</label>
+                              <div class="custom-file">
+                                  <input type="file" class="custom-file-input" id="customFile7">
+                                  <label class="custom-file-label" for="customFile7">Choose file</label>
+                              </div>
+                              <small>(Upload Only winrar/pdf format)</small>
+                              <div class="invalid-feedback">
+                                Please provide a valid city.
+                              </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                              <label for="customFile8" class="font-weight-bold">Trade Licence / CR</label>
+                              <div class="custom-file">
+                                  <input type="file" class="custom-file-input" id="customFile8">
+                                  <label class="custom-file-label" for="customFile8">Choose file</label>
+                              </div>
+                              <small>(Upload Only winrar/pdf format)</small>
+                              <div class="invalid-feedback">
+                                Please select a valid state.
+                              </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                              <label for="customFile9" class="font-weight-bold">Pan Card Identification</label>
+                              <div class="custom-file">
+                                  <input type="file" class="custom-file-input" id="customFile9">
+                                  <label class="custom-file-label" for="customFile9">Choose file</label>
+                              </div>
+                              <small>(Upload Only winrar/pdf format)</small>
+                              <div class="invalid-feedback">
+                                Please provide a valid zip.
+                              </div>
+                            </div>
+                          </div>
+                          <button class="btn btn-primary" type="submit">Register</button>
+                        </form>
               </div>
             </div>
           </div>
@@ -450,6 +536,27 @@ $.fn.extend ( {
        this.html(userDate + ' ' + userTime.substring(0, 8)); 
     }        
 });  
-</script>  
+</script> 
+    
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
 </body>
 </html>
