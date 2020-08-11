@@ -290,20 +290,108 @@
         <div class="row"> 
           
           <!-- Area Chart -->
-          <div class="col-xl-9 col-lg-7"> 
+          <div class="col-xl-6 col-lg-6"> 
             <!-- Basic Card Example -->
             <div class="card shadow mb-4">
               <div class="card-header py-3 bg-gradient-primary">
                 <h6 class="m-0 font-weight-bold text-white">QR Code</h6>
               </div>
               <div class="card-body">
-
+                <form>
+                  <fieldset class="form-group">
+                    <div class="row">
+                      <legend class="col-form-label col-sm-4 pt-0 font-weight-bold">QR Code Size:</legend>
+                      <div class="col-sm-8">
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                          <label class="custom-control-label" for="customRadioInline1">Large (3x3) </label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                          <label class="custom-control-label" for="customRadioInline2">Medium (2x2) </label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input type="radio" id="customRadioInline3" name="customRadioInline1" class="custom-control-input">
+                          <label class="custom-control-label" for="customRadioInline3">Small (1x1) </label>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-4 col-form-label font-weight-bold">Short URL</label>
+                    <div class="col-sm-8">
+                      <select class="drop-select form-control">
+                        <option selected>--Select--</option>
+                        <option value="http://emim.in/Happy">http://emim.in/Happy</option>
+                        <option value="http://emim.in/ss_Q">http://emim.in/ss_Q</option>
+                        <option value="http://emim.in/ss">http://emim.in/ss</option>
+                        <option value="http://emim.in/bulksms_Q">http://emim.in/bulksms_Q</option>
+                        <option value="http://emim.in/bulksms">http://emim.in/bulksms</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="exampleFormControlTextarea2" class="col-sm-4 col-form-label font-weight-bold">QRCode Color</label>
+                    <div class="col-sm-8">
+                     <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="exampleFormControlTextarea2" class="col-sm-4 col-form-label font-weight-bold">Frame Color</label>
+                    <div class="col-sm-8">
+                     <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="exampleFormControlTextarea2" class="col-sm-4 col-form-label font-weight-bold">Text:</label>
+                    <div class="col-sm-8">
+                     <input type="text" class="form-control">
+                    </div>
+                  </div>
+                   <div class="form-group row">
+                    <label for="exampleFormControlTextarea2" class="col-sm-4 col-form-label font-weight-bold">Upload Logo:</label>
+                    <div class="col-sm-8">
+                     <div class="custom-file">
+                      <input type="file" class="custom-file-input" id="customFile">
+                      <label class="custom-file-label" for="customFile">Choose file</label>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="form-group row justify-content-end">
+                    <div class="col-sm-8">
+                      <button type="submit" class="btn btn-outline-success my-2 my-lg-0 font-weight-bold"><i class="fas fa-qrcode"></i> Genrate QR Code</button>
+                      <button type="submit" class="btn btn-outline-danger my-2 my-lg-0 font-weight-bold"><i class="fas fa-sync"></i> Reset</button>
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
           
           <!-- Pie Chart -->
-          <div class="col-xl-4 col-lg-5"> </div>
+          <div class="col-xl-6 col-lg-6"> 
+            <div class="card shadow mb-4">
+              <div class="card-header py-3 bg-gradient-primary">
+                <h6 class="m-0 font-weight-bold text-white">QR Genrated</h6>
+              </div>
+              <div class="card-body">
+                 <h3 class="text-center font-weight-bold mb-3 h4">QRCode View</h3>
+                  <div class="row justify-content-center">
+                         <div class="card card-body shadow border-0 col-lg-5 p-2">
+                             <canvas id="qr" class="w-100"></canvas>
+                         </div>
+                     </div> 
+                  <div class="text-center mt-3">
+                      <a href="#" class="btn btn-success btn-icon-split">
+                        <span class="icon text-white-50">
+                         <i class="fas fa-download"></i>
+                        </span>
+                        <span class="text">Download</span>
+                      </a>
+                   </div>
+              </div>
+            </div>
+         </div>
         </div>
       </div>
       <!-- /.container-fluid --> 
@@ -369,7 +457,10 @@
 
 <!-- Page level custom scripts --> 
 <script src="js/demo/datatables-demo.js"></script> 
-<script src="js/demo/date-range-picker-demo.js"></script> 
+<script src="js/demo/date-range-picker-demo.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    
 <script>
  //Datatable Search Filter
     $(document).ready(function() {
@@ -451,5 +542,26 @@ $.fn.extend ( {
     }        
 });  
 </script>  
+<script>
+    const input = document.querySelector("input");
+    const canvas = document.getElementById("qr");
+
+    const createQR = v => {
+      // https://github.com/neocotic/qrious
+      return new QRious({
+        element: canvas,
+        value: v,
+        size: 250,
+        backgroundAlpha: 0,
+        foreground: "Black" });
+
+    };
+
+    const qr = createQR(input.value);
+
+    input.addEventListener("input", () => {
+      const qr = createQR(input.value);
+    });
+</script>
 </body>
 </html>
