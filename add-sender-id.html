@@ -306,98 +306,43 @@
                 <h6 class="m-0 font-weight-bold text-white font-weight-bold"><i class="far fa-id-card"></i> Add Sender Id</h6>
               </div>
               <div class="card-body">
-                    <form class="needs-validation" novalidate>
-                          <div class="form-row">
-                            <div class="col-md-6 mb-3">
-                              <label for="validationCustom01" class="font-weight-bold">Sender Id<span class="text-danger">*</span></label>
-                              <input type="text" class="form-control" id="validationCustom01" required>
-                              <div class="valid-feedback">
-                                Looks good!
-                              </div>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                              <label for="validationCustom02" class="font-weight-bold">Client Name<span class="text-danger">*</span></label>
-                              <input type="text" class="form-control" id="validationCustom02" required>
-                              <div class="valid-feedback">
-                                Looks good!
-                              </div>
-                            </div>
-                          </div>
-                         <div class="form-row">
-                            <div class="col-md-12 mb-3">
-                              <label for="validationCustom03" class="font-weight-bold">Company Name<span class="text-danger">*</span></label>
-                              <input type="text" class="form-control" id="validationCustom03" required>
-                              <div class="valid-feedback">
-                                Looks good!
-                              </div>
-                            </div>
-                          </div>
-                        
-                          <div class="form-row">
-                            <div class="col-md-4 mb-3">
-                              <label for="validationCustom04" class="font-weight-bold">Country<span class="text-danger">*</span></label>
-                              <input type="text" class="form-control" id="validationCustom04" required>
-                              <div class="invalid-feedback">
-                                Please provide a valid city.
-                              </div>
-                            </div>
-                            <div class="col-md-4 mb-3">
-                              <label for="validationCustom05" class="font-weight-bold">Mobile No.<span class="text-danger">*</span></label>
-                              <input type="text" class="form-control" id="validationCustom05" required>
-                              <div class="invalid-feedback">
-                                Please select a valid state.
-                              </div>
-                            </div>
-                            <div class="col-md-4 mb-3">
-                              <label for="validationCustom06" class="font-weight-bold">Email Id<span class="text-danger">*</span></label>
-                              <input type="email" class="form-control" id="validationCustom06" required>
-                              <div class="invalid-feedback">
-                                Please provide a valid zip.
-                              </div>
-                            </div>
-                          </div>
-                        <div class="form-row">
-                            <div class="col-md-4 mb-3">
-                              <label for="customFile7" class="font-weight-bold">NOC Documents</label>
-                              <div class="custom-file">
-                                  <input type="file" class="custom-file-input" id="customFile7">
-                                  <label class="custom-file-label" for="customFile7">Choose file</label>
-                              </div>
-                              <small>(Upload Only winrar/pdf format)</small>
-                              <div class="invalid-feedback">
-                                Please provide a valid city.
-                              </div>
-                            </div>
-                            <div class="col-md-4 mb-3">
-                              <label for="customFile8" class="font-weight-bold">Trade Licence / CR</label>
-                              <div class="custom-file">
-                                  <input type="file" class="custom-file-input" id="customFile8">
-                                  <label class="custom-file-label" for="customFile8">Choose file</label>
-                              </div>
-                              <small>(Upload Only winrar/pdf format)</small>
-                              <div class="invalid-feedback">
-                                Please select a valid state.
-                              </div>
-                            </div>
-                            <div class="col-md-4 mb-3">
-                              <label for="customFile9" class="font-weight-bold">Pan Card Identification</label>
-                              <div class="custom-file">
-                                  <input type="file" class="custom-file-input" id="customFile9">
-                                  <label class="custom-file-label" for="customFile9">Choose file</label>
-                              </div>
-                              <small>(Upload Only winrar/pdf format)</small>
-                              <div class="invalid-feedback">
-                                Please provide a valid zip.
-                              </div>
-                            </div>
-                          </div>
-                            <button class="btn btn-primary btn-icon-split" type="submit">
-                                <span class="icon text-white">
-                                  <i class="fas fa-user-plus"></i>
-                                </span>
-                                <span class="text font-weight-bold">Register</span>
-                             </button>
-                        </form>
+                     <form>
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label font-weight-bold">Add Sender ID</label>
+                    <div class="col-sm-5">
+                      <div class="input-group">
+                      <input type="text" class="form-control" placeholder="" aria-label="six alphabet" aria-describedby="button-addon2">
+                      <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fas fa-plus-circle"></i></button>
+                      </div>
+                    </div>
+                       <small id="genHelp" class="form-text text-muted">Type 6 Alphabet</small> 
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label font-weight-bold">DLT Registration Number</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" placeholder="" aria-label="six alphabet" aria-describedby="button-addon2">
+                       <small id="genHelp" class="form-text text-muted">Type 6 Alphabet</small> 
+                    </div>
+                  </div>
+                 <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label font-weight-bold">DLT Screenshot</label>
+                    <div class="col-sm-5">
+                         <div class="custom-file">
+                          <input type="file" class="custom-file-input" id="customFile8">
+                          <label class="custom-file-label" for="customFile8">Choose file</label>
+                      </div>
+                      <small>(Upload Only winrar/pdf format)</small>
+                    </div>
+                  </div>
+                  <div class="form-group row justify-content-end">
+                    <div class="col-sm-10 ">
+                      <button type="submit" class="btn btn-outline-success my-2 my-lg-0 font-weight-bold"><i class="fas fa-paper-plane"></i> Submit</button>
+                      <button type="submit" class="btn btn-outline-danger my-2 my-lg-0 font-weight-bold"><i class="fas fa-times"></i> Cancel</button>
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
