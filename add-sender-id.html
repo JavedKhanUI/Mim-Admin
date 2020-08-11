@@ -291,10 +291,16 @@
           
           <!-- Area Chart -->
           <div class="col-xl-9 col-lg-7"> 
+            <div class="alert alert-success" role="alert">
+              	<i class="fas fa-info-circle"></i> Sample File <a href="#" class="alert-link" data-toggle="modal" data-target="#exampleModal">Documents for Sender-ID's</a>. Give it a click if you like.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
             <!-- Basic Card Example -->
             <div class="card shadow mb-4">
               <div class="card-header py-3 bg-gradient-primary">
-                <h6 class="m-0 font-weight-bold text-white" class="font-weight-bold">Add Sender Id</h6>
+                <h6 class="m-0 font-weight-bold text-white font-weight-bold"><i class="far fa-id-card"></i> Add Sender Id</h6>
               </div>
               <div class="card-body">
                     <form class="needs-validation" novalidate>
@@ -382,7 +388,12 @@
                               </div>
                             </div>
                           </div>
-                          <button class="btn btn-primary" type="submit">Register</button>
+                            <button class="btn btn-primary btn-icon-split" type="submit">
+                                <span class="icon text-white">
+                                  <i class="fas fa-user-plus"></i>
+                                </span>
+                                <span class="text font-weight-bold">Register</span>
+                             </button>
                         </form>
               </div>
             </div>
@@ -396,7 +407,32 @@
       
     </div>
     <!-- End of Main Content --> 
-    
+
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header bg-gradient-primary">
+        <h5 class="modal-title text-white" id="exampleModalLabel">Sample Files Documents</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><a href="#">Sample File Documents for UAE</a></li>
+          <li class="list-group-item"><a href="#">Sample File Documents for KUWAIT</a></li>
+          <li class="list-group-item"><a href="#">Sample File Documents for OMAN-1</a></li>
+          <li class="list-group-item"><a href="#">Sample File Documents for OMAN-2</a></li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
     <!-- Footer -->
     <footer class="sticky-footer bg-white">
       <div class="container my-auto">
